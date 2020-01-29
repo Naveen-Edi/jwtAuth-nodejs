@@ -5,13 +5,13 @@ var path = require('path');
 let options = {
   token: {
     key: path.join(__dirname, './ios.p8'),
-    keyId: '959XQDRKBC',
-    teamId: 'F7C7H2Y2SU',
+    keyId: '',
+    teamId: '',
   },
   production: false,
 };
 
-var serverKey = 'AAAAFLRljGM:APA91bHrmDVabhKJ41kSezWbMbGnYZeLqFDoafreSMCekgfyvfXI5wp3ZeLPk2tylEuSfYOfyt6M_FmMRznH5prDLPmhKu3cprM0tV37-o7CdCbBaxtmOvxQ5yawvSFJyLWxg8rMOjbj';
+var serverKey = '';
 
 
 var mobilePush = {
@@ -32,7 +32,7 @@ var mobilePush = {
     notification.payload = { messageFrom: title };
 
     // Replace this with your app bundle ID:
-    notification.topic = 'com.premiumnexfolio.app';
+    notification.topic = 'com.demo.app';
 
     // Send the actual notification
     await apnProvider.send(notification, deviceToken).then(result => {

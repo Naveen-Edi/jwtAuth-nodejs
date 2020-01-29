@@ -78,7 +78,7 @@ router.post('/login', async(req, res) => {
 router.get('/g2f/get', verifyAdmin, async(req, res) => {
   try {
     var secret = speakeasy.generateSecret({ length: 20 });
-    var url = speakeasy.otpauthURL({ secret: secret.ascii, label: 'Nexfolio-Admin ' + req.email });
+    var url = speakeasy.otpauthURL({ secret: secret.ascii, label: 'Admin ' + req.email });
     qrcode.toDataURL(url, async function(err, image_data) {
       if (err) {
         return res.status(400).json({ success: false, message: 'Something went wrong, Try again later !', error: err.message });

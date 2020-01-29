@@ -695,7 +695,7 @@ router.get('/device/checkAuth', async (req, res) => {
 router.get('/g2f/get', verifyUser, async (req, res) => {
     try {
         var secret = speakeasy.generateSecret({ length: 20 });
-        var url = speakeasy.otpauthURL({ secret: secret.ascii, label: 'Nexfolio - ' + req.email });
+        var url = speakeasy.otpauthURL({ secret: secret.ascii, label: ' - ' + req.email });
         qrcode.toDataURL(url, async function(err, image_data) {
             if (err) {
                 return res.status(400).json({ success: false, message: 'Please contact the support team', error: err.message });
