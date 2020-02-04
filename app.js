@@ -1,4 +1,4 @@
-require('./config/settings');
+require('dotenv').config();
 require('./config/connection');
 
 const app = require('./routes/route');
