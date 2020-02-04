@@ -1,4 +1,3 @@
-require('../../config/settings.js');
 require('../../config/connection.js');
 const Admin = require('../models/admin');
 const bcrypt = require('bcryptjs');
